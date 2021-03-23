@@ -20,6 +20,8 @@
     <header>
         {% include "header.html" %}
     </header>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
     <main>
         <div class="container">
             {% block main %}{% endblock %}
